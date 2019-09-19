@@ -1,6 +1,6 @@
 package xyz.ivyxjc.laniakea
 
-const val LANIAKEA_CONTAINER = """
+internal const val LANIAKEA_CONTAINER = """
     <!DOCTYPE html>
     <html lang="en">
     <head>

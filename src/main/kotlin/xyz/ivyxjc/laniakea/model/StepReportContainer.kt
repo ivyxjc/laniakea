@@ -3,7 +3,7 @@ package xyz.ivyxjc.laniakea.model
 import xyz.ivyxjc.laniakea.model.StepStatus.*
 
 
-interface StepReportContainer {
+internal interface StepReportContainer {
     fun buildHtml(id: Long, index: Int): String
 }
 

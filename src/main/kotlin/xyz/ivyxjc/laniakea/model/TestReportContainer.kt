@@ -1,6 +1,6 @@
 package xyz.ivyxjc.laniakea.model
 
-class TestReportContainer {
+internal class TestReportContainer {
     private val list = mutableListOf<StepReportContainer>()
 
     fun addStepReport(stepReportContainer: StepReportContainer) {
