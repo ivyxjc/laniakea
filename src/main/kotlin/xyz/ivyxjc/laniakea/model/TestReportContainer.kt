@@ -7,10 +7,10 @@ class TestReportContainer {
         list.add(stepReportContainer)
     }
 
-    fun showReport(): String {
+    fun showReport(id: Long): String {
         val res = StringBuilder();
-        list.forEach {
-            res.append(it.buildHtml() + "\n")
+        list.forEachIndexed { index, it ->
+            res.append(it.buildHtml(id, index) + "\n")
         }
 
         return res.toString()

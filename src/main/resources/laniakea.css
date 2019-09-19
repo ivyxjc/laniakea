@@ -1,0 +1,20 @@
+#accordion {
+    width: 80%;
+    padding-left: 15%
+}
+
+.laniakea-status-success {
+    background-color: green
+}
+
+.laniakea-status-fail {
+    background-color: red
+}
+
+.laniakea-title {
+    font-size: 20px
+}
+
+.card-body {
+    background-color: beige
+}
