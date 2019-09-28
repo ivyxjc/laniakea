@@ -3,9 +3,8 @@ package xyz.ivyxjc.laniakea.model
 internal class GroupReportContainer(val groupName: String) {
     private val map = mutableMapOf<Long, TestReportContainer>()
 
-    fun addReport(id: Long, status: StepStatus, desc: String, detail: String?) {
-        map.putIfAbsent(id, TestReportContainer())
-        map[id]!!.addStepReport(DefaultStepReportContainer(desc, status, detail))
+    fun addReport(id: Long, testReportContainer: TestReportContainer) {
+        map.putIfAbsent(id, testReportContainer)
     }
 
     fun showReport(): String {

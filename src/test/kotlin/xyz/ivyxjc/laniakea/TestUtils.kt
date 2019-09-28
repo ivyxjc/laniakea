@@ -11,7 +11,13 @@ fun buildRandomBean(): DataBean {
     val res = DataBean()
     res.guid = abs(Random.nextLong())
     res.key = RandomStringUtils.random(8)
-    res.value = RandomStringUtils.random(1000)
+    res.value = """
+        <abc>
+            <hello>
+                world
+            </hello>
+        </abc>
+    """.trimIndent()
     res.tradeDate = LocalDateTime.now()
     res.cancelDate = LocalDate.now()
     res.officeCode = RandomStringUtils.random(20)

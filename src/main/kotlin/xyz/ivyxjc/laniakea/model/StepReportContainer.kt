@@ -5,9 +5,15 @@ import xyz.ivyxjc.laniakea.model.StepStatus.*
 
 internal interface StepReportContainer {
     fun buildHtml(id: Long, index: Int): String
+    fun getGroup(): String?
 }
 
-internal class DefaultStepReportContainer(val desc: String, val status: StepStatus, val detail: String?) :
+internal class DefaultStepReportContainer(
+    private val group: String?,
+    val status: StepStatus,
+    val desc: String,
+    val detail: String?
+) :
     StepReportContainer {
 
     private val reportWithDetailTemplate: String = """
@@ -37,6 +43,10 @@ internal class DefaultStepReportContainer(val desc: String, val status: StepStat
             </div>
         </div>
     """.trimIndent()
+
+    override fun getGroup(): String? {
+        return group
+    }
 
     override fun buildHtml(id: Long, index: Int): String {
         val statusTmp = when (status) {
